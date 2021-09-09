@@ -1,0 +1,25 @@
+server:
+  port: 8006
+spring:
+  application:
+    name: crowd-pay
+  redis:
+    host: 101.132.45.198
+    password: 614521hh
+  session:
+    store-type: redis
+eureka:
+  client:
+    service-url:
+      defaultZone: http://101.132.45.198:8000/eureka/
+ali:
+  pay:
+    appId: 2021000118603677
+    merchantPrivateKey: MIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQCYs9kWZhl+3lVINqfY5ZKxc8KcSVMI69zARBsd69W3ZsU9h47m7Qe52VglIWsA+qBbQc6e7vtdRqAH8gS7fWca1FfIDJB3GJjoYlcXpJ4f2x6BOB7pa1Z/wyg4C48lTwRtrcTfjXZC1yY2ac3Uvn8I4sW+nLu/w9tNvtYqoemr87UPVgQtUf7JWYKiVYOfah5dcmjachCQfo7OEpQAYLw+CMiZDhiIbccvQ/s5A5r3eq2I0xEQsPuNE6VIteTTNrPICewYxqPswu17uI+DHYr2lZ7wXYPCqpe7A/d2+n6vM7WTrEGanymUwHCmQHI8F8t9tIm9jSUfH72OhbJhWenPAgMBAAECggEAW5+WAz2R0LDg5Op+fcMJ6NW3kITigLjdBLQYvTRTUK8mbAvZb7ALcbT6kZTimnzHGNp8epqUUlxdC0dpFYJiChQc85iuWfd1UAIplbMdeanFPO2Khq30Acb8a9xrsIwf8RtRxH0h12s2r3F+okcG/DLtSbjLYn3HKXf3Ey+BgL1Pcx15iGJG6O5WuYvpusyk3KxyQoXp9pPBO3UK2XhdCrHsPPTuswANUgK+8QefZuz+Yu/2Gpug8mGy/5mFmEak/ENHWC2jG/VxiWVFfJt6nRa4jvOeXF2m+rilmGGTVtplLdbdXfHl1nitl7+FSlVg/ixyC+ngyJETAX6qRjXKmQKBgQD44Y8w35kp0yZseXI/2mlmyjouc4/pkzqPZU6upIVFbBZMWevk2QwAYnsb1lKxez7xRLYAnYXpgSPp+Gnf/Z/VUPsdPr7dBEQMXGRR1A0YPuY29ULA3ODMI7gDMYVPBOEjINOKikQzwqNG9AYGUvm9T6QFrz5fhSmmqz1ErLhgIwKBgQCdEgSJqUulzPMMUSsq/LVA08XK454PIf93Wfw9VYjVYvzjmLnEiyyFavFSGK+lcZssNYqeDJhzdV1cWP9n4AYKrs8xa17Q+BPQ8GlSWr6bbbOF3WC8vTQktodK3p8sFPlgNT80HohjxNRsleh9l92uOQSvdqWc+0HF6RKXP3XUZQKBgQC3jTMb6mx9ijqWWeNG8IA3zQGn7JbAv1K7Gw4ygye/EX5IhTESsHjHd9ovp5uJRcogCnrobUSr+BBSqGD9T4InwvfQk8wUGOdO7n0WVHvr28fR1ISM1Nn99IHr6QPWSVT5oWYikOLIAc6Fr8cZtux1EF15y8sGi6EySKyBD5lTXQKBgQCY0jMADWvAwYuobEDn7kAb9u/220epyZZZdX/p3RLpKwqKFsqH5DFJDigFjGc5PTOQ6/cWl4Kss4BGnYDCfEDkm/iTSLhT8Uq2e3K94fSaHT4R/LZmbGATaFRyD/AmX7HSXXxFJX/mMlfL3n7504yoOmnInlO8TOpNuNuRtPjb0QKBgQDYU7o1zWUAT+mvue/NH7VBIMYCWkMN4DwJICJFTEb3dwtZTe3cfkdUjNMJM319/RR+WFEvbJhHxlzgiTJoL0SG9tlITcDWHHqrK2PgnQ9prw2liTABr32yx/WovEB9zgXO/IH/DbS++Vh6heUWyiKxoUqiOW0K+OOXYKznaN8jcQ==
+    alipayPublicKey: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuwBvPREeaRcm49f0zigGJqrm+Y7i/lXsWgiObdfZ01rxREFKA7B2E6uUUjd+SIEcjX6cfO0wfck9OGt7jJz6BkPUYC0FPdbTiBAUBultev/bResJ+zuS+UK4RsHNGTEJobmJznHVogM2+9A811LWW4mQLXrUI7hKhy8sn2lcAvQt5B7RBX3ai1JUpu+l3J73/1JbQFL7kwgnGIky3IFG3PH1EW2k9jb7SDB96HIlpJ84TRQLjlIL9IeX9BU8q0fg8sa9utkMeKLs6P7DVUaTuUqaw2FYikEBIB7I1yOAZ/nquoVK6uuOEViL371I567MKTbwY7KF7aJFt7BxSu/+sQIDAQAB
+    notifyUrl: http://41m4f15940.wicp.vip/pay/notify
+    returnUrl: http://101.132.45.198/pay/return
+    signType: RSA2
+    charset: utf-8
+    gatewayUrl: https://openapi.alipaydev.com/gateway.do
+    logPath: F:\尚硅谷java\crowdfunding

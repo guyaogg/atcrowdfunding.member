@@ -1,0 +1,21 @@
+server:
+  port: 8004
+spring:
+  application:
+    name: crowd-project
+  redis:
+    host: 101.132.45.198
+    password: 614521hh
+  session:
+    store-type: redis
+eureka:
+  client:
+    service-url:
+      defaultZone: http://101.132.45.198:8000/eureka/
+aliyun:
+  oss:
+    end-point: http://oss-cn-shanghai.aliyuncs.com
+    bucket-name: guyaogg0
+    bucket-domain: http://guyaogg0.oss-cn-shanghai.aliyuncs.com
+    access-key-secret: FfnjEZGMrjPhvg60LosTj7BST98uhy
+    access-key-id: LTAI5tFnYo2R7NAUdhBzJKhg

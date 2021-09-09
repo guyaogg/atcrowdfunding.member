@@ -1,0 +1,14 @@
+server:
+  port: 8005
+spring:
+  application:
+    name: crowd-order
+  redis:
+    host: 101.132.45.198
+    password: 614521hh
+  session:
+    store-type: redis
+eureka:
+  client:
+    service-url:
+      defaultZone: http://101.132.45.198:8000/eureka/

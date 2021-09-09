@@ -1,0 +1,37 @@
+server:
+  port: 80
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://101.132.45.198:8000/eureka/
+
+zuul:
+  routes:
+    crowd-portal:
+      service-id: crowd-auth
+      path: /crowd/**
+    crowd-project:
+      service-id: crowd-project
+      path: /project/**
+    crowd-order:
+      service-id: crowd-order
+      path: /order/**
+    crowd-pay:
+      service-id: crowd-pay
+      path: /pay/**
+  ignored-services: "*"
+  sensitive-headers: "*" # 重定向之后保持原有头信息（请求头，响应头
+spring:
+  application:
+    name: crowd-zuul
+  #    配置session存储的redis
+  redis:
+    host: 101.132.45.198
+    password: 614521hh
+  session:
+    store-type: redis
+ribbon:
+  ReadTimeout: 10000
+  ConnectTimeout: 10000

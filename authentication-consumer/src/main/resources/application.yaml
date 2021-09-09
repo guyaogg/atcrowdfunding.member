@@ -1,0 +1,31 @@
+server:
+  port: 8003
+
+spring:
+  application:
+    name: crowd-auth
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+  #    配置session存储的redis
+  redis:
+    host: 101.132.45.198
+    password: 614521hh
+  session:
+    store-type: redis
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://101.132.45.198:8000/eureka/
+short:
+  message:
+    appcode: ce553176a873421889b746b77040884a
+    host: https://dfsns.market.alicloudapi.com
+    path: /data/send_sms
+    skin: TPL_0001
+    expire-at: 7
+ribbon:
+  ReadTimeout: 10000
+  ConnectTimeout: 10000
+

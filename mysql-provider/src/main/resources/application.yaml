@@ -1,0 +1,37 @@
+server:
+  port: 8001
+spring:
+  application:
+    name: crowd-mysql
+  datasource:
+    username: root
+    password: 614521hh
+    url: jdbc:mysql://localhost:3306/project_crowd?serverTimezone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8000/eureka/
+
+
+mybatis:
+  #    type: com.zaxxer.hikari.HikariDataSource
+  jdbc:
+    template:
+      query-timeout: 3
+      # 配置mybatis
+      # 不能同时配置xml文件和configuration配置（建议使用后者
+  #  config-location: classpath:mybatis/mybatis-config.xml
+  mapper-locations: classpath:mybatis/mapper/*.xml
+
+  configuration:
+    map-underscore-to-camel-case: true
+
+logging:
+  level:
+    com:
+      atguigu:
+        crowd:
+          mapper: debug
+          test: debug

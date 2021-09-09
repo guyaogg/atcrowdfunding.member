@@ -1,0 +1,12 @@
+server:
+  port: 8002
+spring:
+  application:
+    name: crowd-redis
+  redis:
+    host: 101.132.45.198
+    password: 614521hh
+eureka:
+  client:
+    service-url:
+      defaultZone: http://101.132.45.198:8000/eureka/
